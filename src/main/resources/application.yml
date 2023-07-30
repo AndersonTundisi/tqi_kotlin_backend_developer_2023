@@ -2,7 +2,7 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/jumarket
+    url: jdbc:mysql://localhost:1000/jumarket
     username: root
     password: admin
   flyway:

@@ -6,12 +6,9 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: admin
       MYSQL_DATABASE: jumarket
-      MYSQL_USER: admin
       MYSQL_PASSWORD: admin
     ports:
-      - 3306:3306
+      - 1000:3306
     volumes:
       - /bd/mysql:/var/lib/mysql
 
-volumes:
-  /bd/mysql:
