@@ -33,19 +33,15 @@ Certifique-se de ter o seguinte software instalado em sua máquina:
 1. Clone o repositório para sua máquina local:
 
 ```
-git clone https://github.com/seu-usuario/mercearia-autoatendimento.git
+git clone https://github.com/AndersonTundisi/tqi_kotlin_backend_developer_2023.git
 ```
 
 2. Acesse o diretório do projeto:
 
-```
-cd system
-```
-
-3. Inicie o banco de dados MySQL usando Docker Compose (ou execute o container do MySQL separadamente):
+3. Inicie o banco de dados MySQL usando Docker Compose que está na pasta bd do projeto (ou execute o container do MySQL separadamente):
 
 ```
-docker-compose up -d
+docker-compose up -d 
 ```
 
 4. Inicie a aplicação Spring Boot:
