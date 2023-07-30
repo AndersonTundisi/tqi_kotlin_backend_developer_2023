@@ -26,7 +26,7 @@ Certifique-se de ter o seguinte software instalado em sua máquina:
 
 - Java Development Kit (JDK) 8 ou superior
 - Docker (para executar o banco de dados MySQL via Docker)
-- Docker Compose (O Docker-Compse deste projeto esta no diretrorio bd/)
+- Docker Compose (O Docker-Compose deste projeto esta no diretrorio bd/)
 
 ## Executando a Aplicação
 
