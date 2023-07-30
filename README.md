@@ -38,7 +38,7 @@ git clone https://github.com/AndersonTundisi/tqi_kotlin_backend_developer_2023.g
 
 2. Acesse o diretório do projeto:
 
-3. Inicie o banco de dados MySQL usando Docker Compose que está na pasta bd do projeto (ou execute o container do MySQL separadamente):
+3. Inicie o banco de dados MySQL usando Docker Compose que está na pasta bd/ do projeto (ou execute o container do MySQL separadamente):
 
 ```
 docker-compose up -d 
