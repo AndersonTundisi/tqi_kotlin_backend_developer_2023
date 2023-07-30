@@ -12,7 +12,7 @@ data class Produto(
     @Column(nullable = false) @Enumerated val unidadeDeMedida: UnidadeDeMedia,
     @Column(nullable = false) val valorUnitario: Double,
     @Column(nullable = false) var quantidadeEstoque: Int,
-    @ManyToOne @JoinColumn(name = "categoria_id")
-    @Column(nullable = false) val categoria: Categoria,
-    @Column(nullable = false) val codeProduto: String = UUID.randomUUID().toString()
+    @ManyToOne @JoinColumn(name = "categoria_id") val categoria: Categoria,
+    @Column(columnDefinition = "BINARY(16)") val codeProduto: String = UUID.randomUUID().toString()
 )
+
