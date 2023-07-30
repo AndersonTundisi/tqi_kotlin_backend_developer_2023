@@ -2,6 +2,7 @@ package com.jumarket.system.service
 
 import com.jumarket.system.repository.CarrinhoDeCompraRepository
 import com.jumarket.system.entity.CarrinhoDeCompra
+import com.jumarket.system.entity.ItemCarrinho
 import com.jumarket.system.enumeration.FormaPagamento
 import org.springframework.stereotype.Service
 
@@ -19,6 +20,7 @@ class CarrinhoDeCompraService(private val carrinhoDeCompraRepository: CarrinhoDe
     fun buscarTodosCarrinhosDeCompra(): List<CarrinhoDeCompra> {
         return carrinhoDeCompraRepository.findAll()
     }
+
     fun finalizarCompra(id: Long, valorTotal: Double, formaPagamento: FormaPagamento): CarrinhoDeCompra? {
         val carrinho = carrinhoDeCompraRepository.findById(id).orElse(null)
 

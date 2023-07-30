@@ -11,4 +11,16 @@ services:
       - 1000:3306
     volumes:
       - /bd/mysql:/var/lib/mysql
+    networks:
+      - rede_SQL
 
+  Adminer:
+    image: adminer
+    ports:
+      - 8888:8888
+    networks:
+      - rede_SQL
+
+networks:
+  rede_SQL:
+    driver: bridge

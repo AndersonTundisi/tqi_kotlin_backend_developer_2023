@@ -4,7 +4,7 @@ import com.jumarket.system.enumeration.FormaPagamento
 import jakarta.persistence.*
 import java.time.LocalDateTime
 import java.util.*
-import kotlin.jvm.Transient
+
 
 @Entity
 data class CarrinhoDeCompra(
@@ -23,10 +23,11 @@ data class CarrinhoDeCompra(
 
     @Enumerated(EnumType.STRING)
     var formaPagamento: FormaPagamento? = null
-) {
-    var valorTotalItens: Double = calcularValorTotalItens()
+)
+{
+        var valorTotalItens: Double = calcularValorTotalItens()
 
-    fun calcularValorTotalItens(): Double {
-        return produtos.sumOf { it.quantidadeItem * it.produto.valorUnitario }
-    }
+        fun calcularValorTotalItens(): Double {
+            return produtos.sumOf { it.quantidadeItem * it.produto.valorUnitario }
+        }
 }

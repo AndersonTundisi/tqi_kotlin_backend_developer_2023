@@ -39,7 +39,7 @@ class ProdutoServiceTest {
         assertEquals(produtoExistente.nome, produtoEncontrado?.nome)
         assertEquals(produtoExistente.valorUnitario, produtoEncontrado?.valorUnitario)
         assertEquals(produtoExistente.quantidadeEstoque, produtoEncontrado?.quantidadeEstoque)
-        assertEquals(produtoExistente.categoria, produtoExistente?.categoria)
+        assertEquals(produtoExistente.categoria, produtoExistente.categoria)
     }
 
     @Test
@@ -55,6 +55,5 @@ class ProdutoServiceTest {
         assertNull(produtoEncontrado)
     }
 
-    // Outros testes para os métodos do serviço ProdutoService podem ser adicionados aqui
 
 }
