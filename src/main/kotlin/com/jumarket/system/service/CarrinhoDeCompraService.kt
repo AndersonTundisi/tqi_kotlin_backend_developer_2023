@@ -16,6 +16,9 @@ class CarrinhoDeCompraService(private val carrinhoDeCompraRepository: CarrinhoDe
         return carrinhoDeCompraRepository.findById(id).orElse(null)
     }
 
+    fun buscarTodosCarrinhosDeCompra(): List<CarrinhoDeCompra> {
+        return carrinhoDeCompraRepository.findAll()
+    }
     fun finalizarCompra(id: Long, valorTotal: Double, formaPagamento: FormaPagamento): CarrinhoDeCompra? {
         val carrinho = carrinhoDeCompraRepository.findById(id).orElse(null)
 

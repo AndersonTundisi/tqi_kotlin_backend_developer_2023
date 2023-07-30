@@ -17,7 +17,7 @@ class CarrinhoDeCompraController(private val carrinhoDeCompraService: CarrinhoDe
 
     @GetMapping("/{id}")
     fun buscarCarrinhoDeCompraPorId(@PathVariable id: Long): ResponseEntity<CarrinhoDeCompra> {
-        val carrinhoDeCompra = carrinhoDeCompraService.buscarCarrinhoDeCompraPorId(id)
+        val carrinhoDeCompra = carrinhoDeCompraService.buscarCarrinhoPorId(id)
 
         return if (carrinhoDeCompra != null) {
             ResponseEntity.ok(carrinhoDeCompra)
