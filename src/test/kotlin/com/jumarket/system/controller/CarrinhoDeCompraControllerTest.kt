@@ -28,7 +28,7 @@ class CarrinhoDeCompraControllerTest {
         @Test
         fun testBuscarCarrinhoPorIdExistente() {
             // Dado um ID de carrinho existente
-            val idCarrinho = 1L
+            val idCarrinho = 1
 
             // Quando fazer uma solicitação GET para o endpoint /carrinhos/{id}
             mockMvc.perform(MockMvcRequestBuilders.get("/carrinhos/$idCarrinho"))
@@ -40,7 +40,7 @@ class CarrinhoDeCompraControllerTest {
         @Test
         fun testBuscarCarrinhoPorIdNaoExistente() {
             // Dado um ID de carrinho que não existe no banco de dados
-            val idCarrinhoNaoExistente = 99L
+            val idCarrinhoNaoExistente = 99
 
             // Quando fazer uma solicitação GET para o endpoint /carrinhos/{id}
             mockMvc.perform(MockMvcRequestBuilders.get("/carrinhos/$idCarrinhoNaoExistente"))

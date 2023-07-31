@@ -5,7 +5,6 @@ import jakarta.persistence.*
 import java.util.*
 
 @Entity
-@Table(name = "produto")
 data class Produto(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) val id: Long = 0,
     @Column(nullable = false) val nome: String,

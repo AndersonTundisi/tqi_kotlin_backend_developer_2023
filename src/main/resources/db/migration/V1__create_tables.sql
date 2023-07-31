@@ -7,7 +7,7 @@ CREATE TABLE categoria (
 CREATE TABLE produto (
   id BIGINT AUTO_INCREMENT NOT NULL,
    nome VARCHAR(255) NOT NULL,
-   unidade_de_medida INT NOT NULL,
+   unidade_de_medida VARCHAR(30) NOT NULL,
    valor_unitario DOUBLE NOT NULL,
    quantidade_estoque INT NOT NULL,
    categoria_id BIGINT NULL,
@@ -20,7 +20,7 @@ ALTER TABLE produto ADD CONSTRAINT FK_PRODUTO_ON_CATEGORIA FOREIGN KEY (categori
 
 CREATE TABLE carrinho_de_compra (
   id BIGINT AUTO_INCREMENT NOT NULL,
-   cpf_cliente VARCHAR(255) NULL,
+   cpf_cliente VARCHAR(14) NULL,
    data_operacao datetime NULL,
    token VARCHAR(255) NULL,
    forma_pagamento VARCHAR(255) NULL,
