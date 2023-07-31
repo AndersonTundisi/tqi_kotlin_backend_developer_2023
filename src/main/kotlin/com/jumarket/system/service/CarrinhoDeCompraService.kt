@@ -2,6 +2,7 @@ package com.jumarket.system.service
 
 import com.jumarket.system.repository.CarrinhoDeCompraRepository
 import com.jumarket.system.entity.CarrinhoDeCompra
+import com.jumarket.system.entity.ItemCarrinho
 import com.jumarket.system.entity.Produto
 import com.jumarket.system.enumeration.FormaPagamento
 import org.springframework.stereotype.Service
@@ -34,4 +35,6 @@ class CarrinhoDeCompraService(private val carrinhoDeCompraRepository: CarrinhoDe
         return carrinhoDeCompraRepository.save(carrinho)
     }
 
+
 }
+

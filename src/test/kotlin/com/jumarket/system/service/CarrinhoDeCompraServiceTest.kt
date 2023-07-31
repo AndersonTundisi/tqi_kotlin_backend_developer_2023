@@ -7,27 +7,28 @@ import org.junit.jupiter.api.Test
 import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.Mockito.`when`
+import org.mockito.Mockito.mock
 import java.time.LocalDateTime
 import java.util.*
 
 class CarrinhoDeCompraServiceTest {
 
     @Mock
-    private lateinit var carrinhoDeCompraRepository: CarrinhoDeCompraRepository
+    private var carrinhoDeCompraRepository = mock<CarrinhoDeCompraRepository>()
 
     @InjectMocks
-    private lateinit var carrinhoDeCompraService: CarrinhoDeCompraService
+    private var carrinhoDeCompraService = mock<CarrinhoDeCompraService>()
 
     @Test
     fun testBuscarCarrinhoPorIdExistente() {
         // Dado um id de carrinho existente
-        val idCarrinho = 1L
-        val carrinhoExistente = CarrinhoDeCompra(id = idCarrinho, cpfCliente = "12345678900",
+        val idCarrinho = 1
+        val carrinhoExistente = CarrinhoDeCompra(id = 1, cpfCliente = "12345678900",
             dataOperacao = LocalDateTime.now(), produtos = mutableListOf())
-        `when`(carrinhoDeCompraRepository.findById(idCarrinho)).thenReturn(Optional.of(carrinhoExistente))
+        `when`(carrinhoDeCompraRepository.findById(1)).thenReturn(Optional.of(carrinhoExistente))
 
         // Quando buscar o carrinho pelo id
-        val carrinhoEncontrado = carrinhoDeCompraService.buscarCarrinhoPorId(idCarrinho)
+        val carrinhoEncontrado = carrinhoDeCompraService.buscarCarrinhoPorId(1)
 
         // Então o carrinho deve ser encontrado e os atributos devem ser iguais
         assertNotNull(carrinhoEncontrado)
@@ -49,6 +50,5 @@ class CarrinhoDeCompraServiceTest {
         assertNull(carrinhoEncontrado)
     }
 
-    // Outros testes para os métodos do serviço CarrinhoDeCompraService podem ser adicionados aqui
 
 }

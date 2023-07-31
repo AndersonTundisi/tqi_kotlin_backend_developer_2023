@@ -11,27 +11,28 @@ import org.junit.jupiter.api.Test
 import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.Mockito.`when`
+import org.mockito.Mockito.mock
 import java.util.*
 
 class ProdutoServiceTest {
 
     @Mock
-    private lateinit var produtoRepository: ProdutoRepository
+    private var produtoRepository = mock<ProdutoRepository>()
 
     @InjectMocks
-    private lateinit var produtoService: ProdutoService
+    private var produtoService = mock<ProdutoService>()
 
     @Test
     fun testBuscarProdutoPorIdExistente() {
         // Dado um id de produto existente
-        val idProduto = 1L
+        val idProduto = 1
         val categoria = Categoria(id = 1, nome = "Eletrônicos")
-        val produtoExistente = Produto(id = idProduto, nome = "Smartphone", unidadeDeMedida = UnidadeDeMedia.UNIDADE,
+        val produtoExistente = Produto(id = 1, nome = "Smartphone", unidadeDeMedida = UnidadeDeMedia.UNIDADE,
             valorUnitario = 1500.0, quantidadeEstoque = 50, categoria = categoria)
-        `when`(produtoRepository.findById(idProduto)).thenReturn(Optional.of(produtoExistente))
+        `when`(produtoRepository.findById(1)).thenReturn(Optional.of(produtoExistente))
 
         // Quando buscar o produto pelo id
-        val produtoEncontrado = produtoService.buscarProdutoPorId(idProduto)
+        val produtoEncontrado = produtoService.buscarProdutoPorId(1)
 
         // Então o produto deve ser encontrado e os atributos devem ser iguais
         assertNotNull(produtoEncontrado)

@@ -1,11 +1,14 @@
 package com.jumarket.system.controller
 
+import com.jumarket.system.repository.CarrinhoDeCompraRepository
+import com.jumarket.system.service.CarrinhoDeCompraService
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
-import org.springframework.test.context.junit.jupiter.SpringExtension
+import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.test.web.servlet.MockMvc
+import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
@@ -16,10 +19,12 @@ class CarrinhoDeCompraControllerTest {
 
     @ExtendWith(SpringExtension::class)
     @WebMvcTest(CarrinhoDeCompraController::class)
-    class CarrinhoDeCompraControllerTest {
+        class CarrinhoDeCompraControllerTest
 
-        // Autowired e outros campos são semelhantes ao exemplo anterior
-
+        @MockBean
+        lateinit var carrinhoDeCompraRepository: CarrinhoDeCompraRepository
+        @MockBean
+        lateinit var carrinhoDeCompraService: CarrinhoDeCompraService
         @Test
         fun testBuscarCarrinhoPorIdExistente() {
             // Dado um ID de carrinho existente
@@ -44,4 +49,3 @@ class CarrinhoDeCompraControllerTest {
 
 
     }
-}
