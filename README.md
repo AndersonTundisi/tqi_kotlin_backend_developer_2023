@@ -2,7 +2,7 @@
 
 # Sistema de Autoatendimento da Mercearia do Bairro - JuMarket
 
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.5.4-brightgreen) ![Kotlin](https://img.shields.io/badge/Kotlin-1.5.21-orange) ![Swagger](https://img.shields.io/badge/Swagger-3.0.0-blue)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.2-brightgreen) ![Kotlin](https://img.shields.io/badge/Kotlin-1.5.21-orange) ![Swagger](https://img.shields.io/badge/Swagger-3.0.0-blue)
 
 ## Descrição do Projeto
 
@@ -66,7 +66,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, enviar p
 
 ## Licença
 
-Este projeto é para estudo e está disponivel para utilizar sem licença.
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
 
 ## Contato
 
